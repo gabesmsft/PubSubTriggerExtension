@@ -16,7 +16,7 @@ namespace FunctionsDotNetDapr
     {
         [FunctionName("DaprPubSubExtensionTrigger")]
         public static void Run(
-            [DaprTopicTrigger("%PubSubName%", Topic = "B")] string subEvent,
+            [DaprTopicTrigger("messagebus", Topic = "B")] string subEvent,
             ILogger log)
         {
             log.LogInformation("HttpTriggerWithDaprPubSubAPITrigger processed a request.");
