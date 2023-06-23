@@ -12,9 +12,9 @@ using Microsoft.Azure.WebJobs.Extensions.Dapr;
 
 namespace FunctionsDotNetDapr
 {
-    public static class HttpTriggerWithDaprPubSubExtensionTrigger
+    public static class DaprPubSubExtensionTrigger
     {
-        [FunctionName("HttpTriggerWithDaprPubSubExtensionTrigger")]
+        [FunctionName("DaprPubSubExtensionTrigger")]
         public static void Run(
             [DaprTopicTrigger("%PubSubName%", Topic = "B")] string subEvent,
             ILogger log)
